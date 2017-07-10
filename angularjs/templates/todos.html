@@ -1,6 +1,6 @@
   <div class="list">
     <div class="add">
-      <a href="" ng-click="addTodo()">+ Adinionar Tarefa</a>
+      <a href="" ng-click="addTodo()">+ Adicionar Tarefa</a>
     </div>
     <div class="item" ng-class="{'editing-item': editing, 'edited': todo.edited, 'completed': todo.completed}" 
       ng-repeat="todo in todos | orderBy: 'completed'">

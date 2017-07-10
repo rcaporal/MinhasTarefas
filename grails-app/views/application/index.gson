@@ -9,25 +9,10 @@ model {
 }
 
 json {
-	message "Welcome to Grails!"
-    environment Environment.current.name
-    appversion grailsApplication.metadata.getApplicationVersion()
-    grailsversion GrailsUtil.grailsVersion
-    appprofile grailsApplication.config.getProperty('grails.profile')
-    groovyversion GroovySystem.getVersion()
-    jvmversion System.getProperty('java.version')
-    reloadingagentenabled Environment.reloadingAgentEnabled
-    artefacts (
-        controllers: grailsApplication.getArtefactInfo(ControllerArtefactHandler.TYPE).classesByName.size(),
-        domains: grailsApplication.getArtefactInfo(DomainClassArtefactHandler.TYPE).classesByName.size(),
-        services: grailsApplication.getArtefactInfo(ServiceArtefactHandler.TYPE).classesByName.size()
-    )
-    controllers grailsApplication.getArtefacts(ControllerArtefactHandler.TYPE), { GrailsClass c ->
-        name c.fullName
-        logicalPropertyName c.logicalPropertyName
-    }
-    plugins pluginManager.allPlugins, { GrailsPlugin plugin ->
-    	name plugin.name
-    	version plugin.version
-    }
+	message "Bem vindo ao Minhas Tarefas!"
+	instruction "Para executar o aplicativo, abra o arquivo index.html contido em :"
+	path "/MinhasTarefas/angularjs/index.html"
+	how_to_use "Ao clicar na tarefa, pode-se editar o nome da mesma, para confirmar a alteração tecle ENTER"
+	save "Para salvar as alterações, atualize a página"
+
 }
